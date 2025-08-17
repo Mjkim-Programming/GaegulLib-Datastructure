@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.10
+        python-version: '3.10'
 
     - name: Install dependencies
       run: |
@@ -27,8 +27,8 @@ jobs:
       run: |
         coverage run -m unittest discover -s gaegulLib/test -p "test*.py"
         coverage report -m
-        coverage xml  # Codecov 연동 시 필요
-        
+        coverage xml
+
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v4
       with:
