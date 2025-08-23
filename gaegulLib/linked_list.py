@@ -1,4 +1,4 @@
-class Node:
+class LinkedNode:
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -7,7 +7,7 @@ class Node:
 class LinkedList:
     def __init__(self, data=None):
         self.length = 1 if data else 0
-        self.head = Node(data) if data else None
+        self.head = LinkedNode(data) if data else None
         self.tail = self.head
             
     def __len__(self):
@@ -23,7 +23,7 @@ class LinkedList:
         return "<->".join(str(x) for x in self)
     
     def append(self, data):
-        node = Node(data)
+        node = LinkedNode(data)
         if not self.head:
             self.head = node
             self.tail = node
@@ -34,7 +34,7 @@ class LinkedList:
         self.length += 1
     
     def appendleft(self, data):
-        node = Node(data)
+        node = LinkedNode(data)
         if not self.head:
             self.head = node
             self.tail = node

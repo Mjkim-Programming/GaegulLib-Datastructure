@@ -1,1 +1,3 @@
 .venv
+gaegulLib/__pycache__
+gaegulLib/test/__pycache__
